@@ -57,6 +57,7 @@ router.post('/:username',cors.corsWithOptions, authenticate.verifyUser, (req,res
             var transactions={
                 tid: 1,
                 company: req.body.company,
+                companyname: req.body.companyname,
                 rate: req.body.rate,
                 quantity: req.body.quantity,
                 amount: req.body.rate * req.body.quantity,
@@ -65,6 +66,7 @@ router.post('/:username',cors.corsWithOptions, authenticate.verifyUser, (req,res
 
             var companies={
                 company:req.body.company,
+                companyname: req.body.companyname,
                 quantity: req.body.quantity,
                 value: req.body.rate * req.body.quantity * -1
             }
@@ -96,6 +98,7 @@ router.post('/:username',cors.corsWithOptions, authenticate.verifyUser, (req,res
             var transactions={
                 tid: user.transactions.length + 1,
                 company: req.body.company,
+                companyname: req.body.companyname,
                 rate: req.body.rate,
                 quantity: req.body.quantity,
                 amount: req.body.rate * req.body.quantity,
@@ -111,6 +114,7 @@ router.post('/:username',cors.corsWithOptions, authenticate.verifyUser, (req,res
                         var transactions={
                             tid: user.transactions.length + 1,
                             company: req.body.company,
+                            companyname: req.body.companyname,
                             rate: req.body.rate,
                             quantity: req.body.quantity,
                             amount: req.body.rate * req.body.quantity,
@@ -136,6 +140,7 @@ router.post('/:username',cors.corsWithOptions, authenticate.verifyUser, (req,res
                             console.log("comp")
                         var companies={
                             company:req.body.company,
+                            companyname: req.body.companyname,
                             quantity: req.body.quantity,
                             value: req.body.rate * req.body.quantity * -1
                         }

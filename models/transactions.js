@@ -27,6 +27,10 @@ const transactionSchema = new Schema({
                  type: String,
                  required:true
             },
+            companyname: {
+                 type: String,
+                 required:true
+            },
             rate: {
                 type: Number,
                 min:0,
@@ -60,6 +64,10 @@ const transactionSchema = new Schema({
                 type: String,
                 required: true,
                 unique: true
+            },
+            companyname: {
+                 type: String,
+                 required:true
             },
             quantity: {
                type:Number,
